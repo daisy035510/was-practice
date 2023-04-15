@@ -7,6 +7,7 @@ public class QueryString {
     public QueryString(String key, String value) {
         this.key = key;
         this.value = value;
+
     }
 
     public boolean exists(String key) {

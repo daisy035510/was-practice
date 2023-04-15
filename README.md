@@ -1,1 +1,5 @@
 TOMCATE WAS 만들기
+
+HTTP REQUEST/ HTTP RESONSE 프로토콜 확인
+
+Thread Pool 이용
