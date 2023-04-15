@@ -41,20 +41,15 @@ public class CustomWebApplicationServer {
 
                     HttpRequest httpRequest = new HttpRequest(br);
 
-                    System.out.println("---------- 1");
-
                     if(httpRequest.isGetReuquest() && httpRequest.matchPath("/calculate")) {
                         QueryStrings queryStrings = httpRequest.getQueryStrings();
 
-                        System.out.println("---------- 2");
                         int operand1 = Integer.parseInt(queryStrings.getValue("operand1"));
                         String operator = queryStrings.getValue("operator");
                         int operand2 = Integer.parseInt(queryStrings.getValue("operand2"));
 
                         int result = Calculator.calculate(new PositiveNumber(operand1), operator, new PositiveNumber(operand2));
                         byte[] body = String.valueOf(result).getBytes();
-
-                        System.out.println("---------- 3");
 
                         HttpResponse response = new HttpResponse(dos);
                         response.response200Header("application/json", body.length);

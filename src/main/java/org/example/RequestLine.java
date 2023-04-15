@@ -37,7 +37,7 @@ public class RequestLine {
     }
 
     public QueryStrings getQueryStrings() {
-        return this.getQueryStrings();
+        return this.queryStrings;
     }
 
     /**
